@@ -1,18 +1,17 @@
-# Calculadora de DMO baja — Cifuentes Lab
+# Calculadora de DMO baja — UACM / Cifuentes Lab
 
-Aplicación estática para GitHub Pages; no requiere Python ni servidor al ejecutarse.
+Sitio estático para GitHub Pages. Incluye logo UACM suministrado por el usuario y emblema de Cifuentes Lab mostrado en escala plateada mediante CSS.
 
 ## Publicación
-1. Crear un repositorio nuevo en GitHub (por ejemplo, `calculadora-dmo`).
-2. Subir **index.html**, **styles.css**, **script.js** y **model.json** a la raíz de la rama `main`.
-3. Ir a **Settings → Pages → Build and deployment**, seleccionar **Deploy from a branch**, **main** y **/(root)**, y guardar.
-4. Abrir la URL indicada en Pages (normalmente `https://USUARIO.github.io/calculadora-dmo/`).
 
-## Procedencia del modelo
-Parámetros exportados de `modelo_DMO_cuello_femoral.joblib` de este análisis. Pipeline: imputación mediana, escalado StandardScaler, regresión logística L2 (C=0.2). Predictores: `EDAD`, `PESO, kg`, `MASA MUSCULO`. Desenlace: T-score de cuello femoral < −1. Se implementa la fórmula logit con medias, escalas, coeficientes e intercepto originales. N=43 mujeres, rango de edad 40–71 años.
+1. Descomprime el ZIP.
+2. Sube **los siete archivos de la raíz** al repositorio `juancifuentes-prog/Calculadora-DMO-UACM` reemplazando los archivos existentes cuando corresponda.
+3. Mantén Settings → Pages → `main` → `/(root)`.
+4. Visita https://juancifuentes-prog.github.io/Calculadora-DMO-UACM/.
 
-## Interpretación
-La clasificación «DMO baja» incluye osteopenia y osteoporosis por cuello femoral; no separa ambos diagnósticos. Es un prototipo exploratorio, no es un dispositivo médico ni sustituye DXA. El umbral 50% no está validado clínicamente. No incluye corrección por estado menopáusico.
+## Notas
 
-## Privacidad
-Las entradas se calculan directamente en JavaScript en el navegador y no se envían a servidores. GitHub Pages aloja archivos públicos del sitio, incluyendo los parámetros del modelo; no subas la base de pacientes al repositorio.
+- Se conservan sin cambios `script.js` y `model.json` del prototipo existente.
+- Los logos se cargan de forma local, sin dependencias externas.
+- El logo de laboratorio se presenta visualmente en escala plateada con `filter: grayscale(...)`, conservando el archivo original.
+- Modelo exploratorio sin validación clínica externa; no debe utilizarse con fines diagnósticos.
