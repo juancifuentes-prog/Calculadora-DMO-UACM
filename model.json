@@ -1,0 +1,39 @@
+{
+  "features": [
+    "EDAD",
+    "PESO, kg",
+    "MASA MUSCULO"
+  ],
+  "means": [
+    55.23255813953488,
+    69.72558139534884,
+    39.97906976744186
+  ],
+  "scales": [
+    8.301967290816231,
+    14.337900547285154,
+    4.042538814272529
+  ],
+  "coefficients": [
+    0.3116135034794084,
+    -0.4795779601029928,
+    -0.2574547590335375
+  ],
+  "intercept": -1.104525317020621,
+  "sampleSize": 43,
+  "trainingRanges": {
+    "age": [
+      40,
+      71
+    ],
+    "weight": [
+      35.8,
+      110.8
+    ],
+    "muscle": [
+      30.3,
+      51.5
+    ]
+  },
+  "outcome": "T-score del cuello femoral < -1 (incluye osteopenia y osteoporosis)"
+}
